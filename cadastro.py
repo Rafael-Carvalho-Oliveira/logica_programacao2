@@ -8,7 +8,8 @@ while True:
     print("2. Listar Usuário")
     print("3. Excluir Usuário")
     print("4. Buscar pelo nome")
-    print("5. Sair")
+    print("5. Inserir um nome")
+    print("6. Sair")
     print(66*"#")
     print()
 
@@ -46,12 +47,23 @@ while True:
             for i in lista_usuario:
                     if i == nome_buscar:
                         print(i)
+    # inserir em uma posição
+    elif opcao == 5:
+        novo_nome = input("digite o nome que deseja inserir: ").upper()
+        posicao_nome = int(input("Digite a posição que deseja inserir: "))
+
+        posicao_nome -= 1
+        if posicao_nome >= 0 and posicao_nome <= len(lista_usuario):
+            lista_usuario.insert(posicao_nome, novo_nome)
+        else:
+            print("Posição inválida")
+
+
 
     #sair do sistema
-    elif opcao == 5:
+    elif opcao == 6:
         print("Saindo do sistema!")
         break
 
     else:
         print("Digite uma opção válida!")
-
