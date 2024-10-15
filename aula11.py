@@ -1,0 +1,1 @@
+# Uma função que receba do usuário 3 notas de um aluno e retorne a média
